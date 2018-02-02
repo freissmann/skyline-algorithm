@@ -8,5 +8,13 @@ For instance, the sequence of “[[1,7,2], [3,4,3], [5,7,4]]” results in the f
 
 ![Example Skyline](/example-skyline.png)
 
+# Algorithm implemented
+To be defined
+
+# Open points
+* Drawing mechanism not yet implemented
+* Tree rebalancing, as in works case the tree is actually only a linked-list
+* Needs test to ensure that all possible permutations of the addition order always result in same skyline
+
 # License
 MIT License

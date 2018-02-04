@@ -2,7 +2,7 @@
 This is a possible example of the skyline algorithm based on a sorted binary tree written in Kotlin.
 
 # Problem
-You are given a series of buildings and only the outer most line should of all buildings should be drawn. A building is defined by a string with the format [x1, x2, y1] where x1 is the start- and x2 the end-coordinate and y1 is the height.
+You are given a series of buildings and only the outer most line of all buildings should be drawn. A building is defined by a string with the format [x1, x2, y1] where x1 is the start- and x2 the end-coordinate and y1 is the height.
 
 For instance, the sequence of the buildings B1 to B7 results in the following skyline:
 
@@ -42,17 +42,21 @@ or
 * (The added building is overlapping either right, left or both) Split the added building in three parts. And propagate the left-part to the left-node and the right-part to the right node. Only handle the intersecting part inside the current node. See in depth behaviour below:
 
 1.1. In this example B1 is the root node and   we will add B2 to it.
+
 ![1.1](/images/algorithm-1.1.png)
 
 1.2. The left part of both nodes, which is not intersecting will be propagated to the left node. And as there is no left node yet, just add it.
+
 ![1.2](/images/algorithm-1.3.png)
 
 
 1.3. Same behaviour for the right part as in 1.2.
+
 ![1.3](/images/algorithm-1.3.png)
 
 
 1.4. Now both parts to the left and right have been handled correctly, it is time to set the current node to the intersecting part with the maximum height.
+
 ![1.4](/images/algorithm-1.4.png)
 
 # Open points

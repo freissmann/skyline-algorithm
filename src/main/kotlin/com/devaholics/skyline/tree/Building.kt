@@ -73,6 +73,15 @@ data class Building constructor(val start: Float,
     }
 
     /**
+     * Checks if _this_ is touching _that_ on _that's_ left side.
+     *
+     * @return true, if they are only touching; false, if they overlap or are separated
+     */
+    fun isLeftAdjacentOf(that: Building): Boolean {
+        return this.end == that.start
+    }
+
+    /**
      * Checks if _this_ and _that_ have the same height.
      *
      * @return true, if they have the same height; false, otherwise

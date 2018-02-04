@@ -135,13 +135,8 @@ class SkylineNode(private var leftNode: SkylineNode? = null,
     }
 
     private fun canBeMerged(left: Building, right: Building): Boolean {
-        return areAdjacent(left, right)
+        return left.isLeftAdjacentOf(right)
                 && left.isSameHeight(right)
-    }
-
-
-    private fun areAdjacent(left: Building, right: Building): Boolean {
-        return left.end == right.start
     }
 
     private fun toList(): List<Building> {

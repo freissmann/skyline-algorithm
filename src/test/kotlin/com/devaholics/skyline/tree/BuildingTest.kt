@@ -154,6 +154,30 @@ class BuildingTest {
 
 
     @Test
+    fun isLeftAdjacentOf_withThisTouchingThat_true() {
+        val isLeftAdjacentOf = ZERO_TO_THREE.isLeftAdjacentOf(THREE_TO_FOUR)
+
+        assertThat(isLeftAdjacentOf, `is`(true))
+    }
+
+    @Test
+    fun isLeftAdjacentOf_withThisFarLeftOfThat_false() {
+        val isLeftAdjacentOf = ZERO_TO_ONE.isLeftAdjacentOf(THREE_TO_FOUR)
+
+        assertThat(isLeftAdjacentOf, `is`(false))
+    }
+
+    @Test
+    fun isLeftAdjacentOf_withThisFarRightOfThat_false() {
+        val isLeftAdjacentOf = THREE_TO_FOUR.isLeftAdjacentOf(ZERO_TO_ONE)
+
+        assertThat(isLeftAdjacentOf, `is`(false))
+    }
+
+    // --------------------------------------------------------------------------
+
+
+    @Test
     fun isSameHeight_withDifferentHeights_false() {
         val isSameHeight = EMPTY.withHeight(1F).isSameHeight(EMPTY.withHeight(2F))
 

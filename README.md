@@ -4,6 +4,7 @@ This is a possible example of the skyline algorithm based on a sorted binary tre
 # Problem
 You are given a series of buildings and only the outer most line of all buildings should be drawn. A building is defined by a string with the format [x1, x2, y1] where x1 is the start- and x2 the end-coordinate and y1 is the height.
 
+# Example
 For instance, the sequence of the buildings B1 to B7 results in the following skyline:
 
 * B1 = Building(1, 4, 1)
@@ -41,7 +42,7 @@ or
 
 * (The added building is overlapping either right, left or both) Split the added building in three parts. And propagate the left-part to the left-node and the right-part to the right node. Only handle the intersecting part inside the current node. See in depth behaviour below:
 
-1.1. In this example B1 is the root node and   we will add B2 to it.
+1.1. In this example B1 is the root node and we will add B2 to it.
 
 ![1.1](/images/algorithm-1.1.png)
 
